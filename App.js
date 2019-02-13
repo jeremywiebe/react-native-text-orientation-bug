@@ -47,13 +47,25 @@ export default class App extends Component<Props, State> {
               padding: 16,
               backgroundColor: "#f902ee"
             }
-            // This forces the overall stylesheet of the view to change after
-            // rotation, which seems to cause RN to properly recalculate this
-            // view's frame.
+            // FIXIT: This forces the overall stylesheet of the view to change
+            // after rotation, which seems to cause RN to properly recalculate
+            // this view's frame.
             // , this.state.test ? { paddingBottom: 12 } : null
           ]}
         >
           <View style={{ backgroundColor: "#fee5fd" }}>
+            <Text style={{ padding: 4, fontSize: 14, fontWeight: "bold" }}>
+              Instructions
+            </Text>
+            <Text style={{ padding: 4 }}>
+              Rotate the device to landscape orientation. Reload the app (⌘+r).
+              Rotate the device to Portrait and back to Landscape. Observe that
+              the containing fuschia View is now sized different than it was
+              originally.
+            </Text>
+            <Text style={{ padding: 4 }}>
+              Now uncomment the code below the "FIXIT" comment above and retry.
+            </Text>
             <Text style={{ fontSize: 30 }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing
             </Text>
